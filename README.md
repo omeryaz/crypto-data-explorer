@@ -15,7 +15,7 @@ This project involves the analysis of cryptocurrency data sourced from the CoinM
 
 ### Client Start
 
-1. After starting the server, open separate a terminal.
+1. After starting the server, open a separate terminal.
 2. Make sure you are at the main directory. ('cd ..' can be used to navigate up one directory)
 3. Install dependencies: 'npm install'
 4. Start the client: 'npm run dev'
