@@ -23,4 +23,3 @@ import CandleStickTest from './subcomponents/CandleStickChart.vue'
   transform: scaleY(0.9);
 }
 </style>
-./subcomponents/CandleStickChart.vue
