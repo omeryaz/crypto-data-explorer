@@ -2,14 +2,14 @@
 import axios from 'axios'
 import { store } from '@/store'
 import type { CoinData } from '@/store'
+import { onMounted } from 'vue'
 
 // List of available coins
 const coinArr = ['Avalanche', 'Bitcoin', 'Ethereum', 'Mina', 'Polkadot', 'Solana']
 
 const handleSelectChange = async () => {
-  // Call off fetching form the API if the data is already available
+  // Call off fetching from the API if the data is already available
   if (store.chartData.map((el) => el.name).includes(store.selectedCoin)) {
-    console.log('API call has been called off')
     return
   }
   try {
@@ -34,6 +34,10 @@ const handleSelectChange = async () => {
     store.isLoading = false
   }
 }
+
+onMounted(() => {
+  handleSelectChange()
+})
 </script>
 
 <template>

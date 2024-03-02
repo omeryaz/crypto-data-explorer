@@ -1,46 +1,57 @@
-# crypto-graph
+# Crypto Data Explorer
 
-This template should help get you started developing with Vue 3 in Vite.
+This project involves the analysis of cryptocurrency data sourced from the CoinMarketCap API and historical data parsed from .csv files. The objective is to create visualizations using Apex Charts to present key metrics and trends in the crypto market. The project encompasses the development of data cards, interactive charts, and timeframe filters.
 
-## Recommended IDE Setup
+![Landing Page](./example-images/landing-page.png)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Configuration
 
-## Type Support for `.vue` Imports in TS
+### Server Start
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+1. Open a terminal
+2. Navigate to the server directory: 'cd /server'
+3. Install dependencies: 'npm install'
+4. Start the server: 'npm start'
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+### Client Start
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+1. After starting the server, open separate terminal.
+2. Make sure you are at the main directory. ('cd ..' can be used to navigate up one directory)
+3. Install dependencies: 'npm install'
+4. Start the client: 'npm run dev'
+5. Open your web browser and navigate to the designated localhost URL to view the application.
 
-## Customize configuration
+## Features
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+### Information Cards
 
-## Project Setup
+Cards show the following information about the selected cryptocurrency:
 
-```sh
-npm install
-```
+- Price: Current market price.
+- Market Cap: Total market capitalization.
+- Trading Volume: Total trading volume.
+- Market Dominance: Percentage share.
 
-### Compile and Hot-Reload for Development
+![Data Cards](./example-images/data-cards.png)
 
-```sh
-npm run dev
-```
+### Charts
 
-### Type-Check, Compile and Minify for Production
+Charts show the following information about the selected cryptocurrency over a specified time period(week, month, or year).
 
-```sh
-npm run build
-```
+![Charts](./example-images/charts.png)
 
-### Lint with [ESLint](https://eslint.org/)
+#### Line Chart
 
-```sh
-npm run lint
-```
+Displays the opening and closing prices.
+
+#### Candlestick Chart
+
+Shows the opening, closing, highest, and lowest values.
+
+## Data Sources
+
+The application utilizes data from CoinMarketCap, a trusted source for cryptocurrency market data, ensuring that users have access to accurate and up-to-date information 2. Additionally, for the charts, data is parsed from .csv files taken from CoinMarketCap, processed on the server side to ensure efficient data handling and rendering.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

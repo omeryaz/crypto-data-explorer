@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import OpenCloseChart from './subcomponents/OpenCloseChart.vue'
-import HighestLowestChart from './subcomponents/HighestLowestChart.vue'
 import RangeSelect from './subcomponents/RangeSelect.vue'
+import CandleStickTest from './subcomponents/CandleStickChart.vue'
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import RangeSelect from './subcomponents/RangeSelect.vue'
         <OpenCloseChart></OpenCloseChart>
       </div>
       <div class="col chart">
-        <HighestLowestChart></HighestLowestChart>
+        <CandleStickTest></CandleStickTest>
       </div>
     </div>
   </div>
@@ -23,3 +23,4 @@ import RangeSelect from './subcomponents/RangeSelect.vue'
   transform: scaleY(0.9);
 }
 </style>
+./subcomponents/CandleStickChart.vue

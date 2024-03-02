@@ -1,6 +1,7 @@
 <script setup lang="ts">
-  import { store } from '@/store'
-  let rangeArr = ['week', 'month', 'year']
+import { store } from '@/store'
+// CHART DATA RANGES
+let rangeArr = ['week', 'month', 'year']
 </script>
 
 <template>
@@ -14,43 +15,43 @@
       />
       <span>{{ option }}</span>
     </label>
-  </div></template
->
+  </div>
+</template>
 
 <style scoped>
-  .form-select--range {
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-  }
+.form-select--range {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
 
-  .form-select--container {
-    height: 2rem;
-  }
+.form-select--container {
+  height: 2rem;
+}
 
-  .radio-label {
-    display: inline-block;
-    margin-right: 10px;
-  }
+.radio-label {
+  display: inline-block;
+  margin-right: 10px;
+}
 
-  input[type='radio'] {
-    display: none;
-  }
+input[type='radio'] {
+  display: none;
+}
 
-  input[type='radio'] + span {
-    display: inline-block;
-    padding: 5px 10px;
-    color: #8a8a8a;
-    cursor: pointer;
-    text-transform: capitalize;
-  }
+input[type='radio'] + span {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #8a8a8a;
+  cursor: pointer;
+  text-transform: capitalize;
+}
 
-  input[type='radio'] + span:hover {
-    color: #fff;
-  }
+input[type='radio'] + span:hover {
+  color: #fff;
+}
 
-  input[type='radio']:checked + span {
-    background-color: var(--blue-primary);
-    color: #fff;
-    border-color: var(--blue-primary);
-  }
+input[type='radio']:checked + span {
+  background-color: var(--blue-primary);
+  color: #fff;
+  border-color: var(--blue-primary);
+}
 </style>

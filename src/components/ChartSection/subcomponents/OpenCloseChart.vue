@@ -9,6 +9,7 @@ const openValues = ref<string[]>([])
 const closeValues = ref<string[]>([])
 const timeStamps = ref<string[]>([])
 
+// Update data as selectedCoin changes
 watchEffect(() => {
   const newData = store.chartData.find((coin) => coin.name === store.selectedCoin)
   data.value = newData
@@ -31,7 +32,7 @@ const chartOptions = ref({
   },
   yaxis: {
     title: {
-      text: 'Dollars ($)'
+      text: 'Price ($)'
     }
   },
   tooltip: {
@@ -58,6 +59,7 @@ const series = ref([
   }
 ])
 
+// Update series as data or chartSelectedRange changes
 watchEffect(() => {
   const chartDataValue = data.value
   if (chartDataValue && store.chartSelectedRange in chartDataValue) {
@@ -66,9 +68,9 @@ watchEffect(() => {
     closeValues.value = rangeData.map((obj) => formatLargeNumber(Number(obj.close)))
     timeStamps.value = rangeData.map((obj) => String(obj.timestamp))
 
-    // Store the values to the first series
+    // Update series with new open values
     series.value[0].data = openValues.value
-    // Store the values to the second series
+    // Update series with new close values
     series.value[1].data = closeValues.value
 
     // Update chartOptions with the new timeStamps

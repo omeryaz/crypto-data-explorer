@@ -37,10 +37,13 @@ const selectedIcon = computed(() => {
 <template>
   <div class="coin-info">
     <div class="coin-info__symbol">
+      <!-- RENDER COIN ICON -->
       <component :is="selectedIcon"></component>
     </div>
     <h5 class="coin-info__name">
+      <!-- COIN NAME -->
       {{ store.selectedCoin }}
+      <!-- COIN ACRONYM -->
       <i class="coin-info__acronym">{{ coinAcronym }}</i>
     </h5>
   </div>

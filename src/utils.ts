@@ -11,10 +11,11 @@ export function formatLargeNumber(number: number) {
     return number.toFixed(3)
   }
 
-  if (number <= 1000) {
+  if (number < 1000) {
     return number.toFixed(2)
   }
 
+  // Add suffix if number is too large
   for (const suffix in suffixes) {
     if (number >= suffixes[suffix]) {
       return (number / suffixes[suffix]).toFixed(1) + suffix
