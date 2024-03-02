@@ -50,7 +50,7 @@ Shows the opening, closing, highest, and lowest values.
 
 ## Data Sources
 
-The application utilizes data from CoinMarketCap, a trusted source for cryptocurrency market data, ensuring that users have access to accurate and up-to-date information 2. Additionally, for the charts, data is parsed from .csv files taken from CoinMarketCap, processed on the server side to ensure efficient data handling and rendering.
+The application utilizes data from CoinMarketCap ensuring that users have access to accurate and up-to-date information. Additionally, for the charts, historical data is parsed from .csv files taken from CoinMarketCap.
 
 ## License
 
